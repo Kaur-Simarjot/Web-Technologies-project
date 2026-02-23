@@ -1,0 +1,27 @@
+/* General body styling */
+body {
+    background-color: rgb(255, 255, 227);
+    font-family: Arial, sans-serif;
+}
+.center-line {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.about-hostel {
+    width: 70%;
+    margin: 60px auto;   /* centers horizontally */
+    text-align: center;
+}
+.about-hostel h2 {
+    color: #0d6efd;
+}
+
+.about-hostel p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.image-box {
+    display: flex;
+    justify-content: center;
+}
