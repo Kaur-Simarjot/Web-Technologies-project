@@ -23,7 +23,8 @@ body {
 }
 .image-box {
     display: flex;
-    justify-content: center;
+    justify-content:left;
+    width: 200px;
 }
 /* Navbar container */
 .navgationbar {
@@ -57,11 +58,5 @@ body {
 }
 
 .navigation-links a:hover {
-    color: whitesmoke;
-}
-.top-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px;
+    color: red;
 }
