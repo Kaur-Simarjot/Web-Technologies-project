@@ -195,3 +195,10 @@ body {
   animation: floatDown 6s ease-in-out infinite;
 }
 
+.rounded-img{
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    border-radius: 20px;
+}
