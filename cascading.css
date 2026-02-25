@@ -2,7 +2,7 @@
 body {
   background: #7077e3;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
     margin: 0;
   height: 100vh;
 
@@ -90,7 +90,7 @@ body {
   padding: 60px 8% 0 8%;
   background: radial-gradient(circle at 20% 20%, #5c5185, #241f4b);
   color: white;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 /* LEFT SIDE */
@@ -128,7 +128,8 @@ body {
 /* CARD STYLE */
 .service-card {
   position: absolute;
-  width: 260px;
+  width: 240px;
+  height: 100px;
   padding: 25px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.06);
@@ -150,7 +151,7 @@ body {
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-30px);
 }
 
 /* INDIVIDUAL POSITIONS */
