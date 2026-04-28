@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mess Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="mess.css">
+</head>
+
+<body>
+
+
+
+<!-- HEADER -->
+<section class="header-section">
+    <h1>🍽 Hostel Mess</h1>
+    <p>Click on a day to view the menu</p>
+</section>
+
+<!-- MENU SECTION -->
+<div class="container my-5 text-center">
+    <div class="menu-box">
+    
+
+</div>
+
+    <!-- Day Buttons -->
+    <div class="days">
+        <button onclick="showMenu('mon')">Monday</button>
+        <button onclick="showMenu('tue')">Tuesday</button>
+        <button onclick="showMenu('wed')">Wednesday</button>
+        <button onclick="showMenu('thu')">Thursday</button>
+        <button onclick="showMenu('fri')">Friday</button>
+        <button onclick="showMenu('sat')">Saturday</button>
+        <button onclick="showMenu('sun')">Sunday</button>
+    </div>
+
+    <!-- MENUS -->
+
+    <div id="mon" class="menu-box">
+        <h4>Monday Menu</h4>
+        <p>Breakfast: Paratha + Tea</p>
+        <p>Lunch: Rice, Dal, Sabzi</p>
+        <p>Dinner: Chapati, Paneer</p>
+    </div>
+
+    <div id="tue" class="menu-box">
+        <h4>Tuesday Menu</h4>
+        <p>Breakfast: Bread + Butter</p>
+        <p>Lunch: Rice, Rajma</p>
+        <p>Dinner: Chapati, Mix Veg</p>
+    </div>
+
+    <div id="wed" class="menu-box">
+        <h4>Wednesday Menu</h4>
+        <p>Breakfast: Poha</p>
+        <p>Lunch: Rice, Chole</p>
+        <p>Dinner: Chapati, Dal</p>
+    </div>
+
+    <div id="thu" class="menu-box">
+        <h4>Thursday Menu</h4>
+        <p>Breakfast: Sandwich</p>
+        <p>Lunch: Rice, Dal Fry</p>
+        <p>Dinner: Chapati, Paneer</p>
+    </div>
+
+    <div id="fri" class="menu-box">
+        <h4>Friday Menu</h4>
+        <p>Breakfast: Upma</p>
+        <p>Lunch: Rice, Kadhi</p>
+        <p>Dinner: Chapati, Aloo Sabzi</p>
+    </div>
+
+    <div id="sat" class="menu-box">
+        <h4>Saturday Menu</h4>
+        <p>Breakfast: Paratha</p>
+        <p>Lunch: Rice, Chole</p>
+        <p>Dinner: Chapati, Dal</p>
+    </div>
+
+    <div id="sun" class="menu-box">
+        <h4>Sunday Menu</h4>
+        <p>Breakfast: Special Breakfast</p>
+        <p>Lunch: Special Lunch</p>
+        <p>Dinner: Special Dinner</p>
+    </div>
+    <div class="menu-quote">
+        <p>"Good food is the foundation of student life."</p>
+    </div>
+
+</div>
+<div class="container text-center my-5">
+
+    <h3>Mess Timings</h3>
+
+    <div class="timings">
+
+        <div class="time-card">
+            <h5>Breakfast</h5>
+            <p>7:30 AM - 9:30 AM</p>
+        </div>
+
+        <div class="time-card">
+            <h5>Lunch</h5>
+            <p>12:30 PM - 2:30 PM</p>
+        </div>
+
+        <div class="time-card">
+            <h5>Dinner</h5>
+            <p>7:30 PM - 9:30 PM</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+function showMenu(day) {
+
+    // Hide all menus
+    let menus = document.querySelectorAll('.menu-box');
+    menus.forEach(menu => menu.style.display = "none");
+
+    // Remove active from all buttons
+    let buttons = document.querySelectorAll('.days button');
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Show selected menu
+    document.getElementById(day).style.display = "flex";
+
+    // Highlight clicked button
+    event.target.classList.add("active");
+}
+
+// Default open
+window.onload = function() {
+    document.querySelector('.days button').click();
+}
+</script>
+
+</body>
+</html>
