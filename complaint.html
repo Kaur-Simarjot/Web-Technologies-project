@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complaints</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="complaint.css">
+</head>
+
+<body>
+
+
+
+<!-- HEADER -->
+<section class="header-section">
+    <h1>📝 Complaints & Feedback</h1>
+    <p>Report your hostel issues easily</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="main-content container my-5">
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMsg" class="success-message">
+        ✅ Your complaint has been registered successfully!
+    </div>
+
+    <!-- FORM -->
+    <div class="form-box">
+        <h3 class="text-center mb-4">Submit Complaint</h3>
+
+        <form id="complaintForm">
+
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+            <div class="mb-3">
+                <label>Room Number</label>
+                <input type="text" class="form-control" placeholder="Enter room number">
+            </div>
+
+            <div class="mb-3">
+                <label>Complaint Type</label>
+                <select class="form-control">
+                    <option value="">Select type</option>
+                    <option>Water Issue</option>
+                    <option>Electricity</option>
+                    <option>Cleanliness</option>
+                    <option>Mess Food</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Description</label>
+                <textarea class="form-control" rows="4" placeholder="Describe your issue"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="submit-btn">Submit Complaint</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Hostel Management System
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.getElementById("complaintForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let inputs = this.querySelectorAll("input, textarea, select");
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if(input.value.trim() === "" || input.value === "Select type") {
+            input.style.border = "1px solid red";
+            isValid = false;
+        } else {
+            input.style.border = "none";
+        }
+    });
+
+    if(!isValid) {
+        alert("⚠ Please fill all fields!");
+        return;
+    }
+
+    // Show success message
+    let msg = document.getElementById("successMsg");
+    msg.style.display = "block";
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+        msg.style.display = "none";
+    }, 3000);
+
+    // Reset form
+    this.reset();
+});
+</script>
+
+</body>
+</html>

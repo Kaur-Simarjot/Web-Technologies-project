@@ -1,0 +1,92 @@
+/* ===== PAGE BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #4b3b75, #2f2a5a);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* ===== HEADER ===== */
+.header-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ===== MAIN CONTENT HEIGHT ===== */
+.main-content {
+    min-height: 70vh;
+}
+
+/* ===== FORM BOX ===== */
+.form-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.form-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(167, 139, 250, 0.4);
+}
+
+/* ===== INPUTS ===== */
+.form-control {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ddd;
+}
+
+/* Focus effect */
+.form-control:focus {
+    box-shadow: 0 0 8px #a78bfa;
+    background: rgba(174, 60, 227, 0.15);
+    color: rgb(13, 13, 13);
+}
+
+/* ===== BUTTON ===== */
+.submit-btn {
+    background: linear-gradient(to right, #a78bfa, #7c3aed);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(167, 139, 250, 0.5);
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.success-message {
+    display: none;
+    text-align: center;
+    background: rgba(0, 255, 150, 0.2);
+    color: #00ffae;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1e1b3a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
