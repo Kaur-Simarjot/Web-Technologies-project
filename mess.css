@@ -8,47 +8,97 @@ body {
 
 
 
-/* Header */
-.header-section {
+/* ===== HERO SECTION ===== */
+.hero-section {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 40px 0;
+
+    background: linear-gradient(
+        #5c5185(30, 27, 58, 0.8),
+        #5c5185(30, 27, 58, 0.9)
+    ),
+    linear-gradient(to right, #4b3b75, #2f2a5a);
+
+    position: relative;
 }
 
+/* Content */
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Glow effect */
+.hero-content h1 {
+    text-shadow: 0 0 10px rgba(167, 139, 250, 0.6);
+}
+
+/* Subtitle */
+.hero-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #d1c4ff;
+}
+
+/* Bottom divider line */
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #a78bfa, transparent);
+}
 /* Buttons */
 .days button {
+    padding: 14px 28px;      /* increase size */
+    font-size: 16px;         /* bigger text */
+    border-radius: 30px;
+    border: none;
+
     background: rgba(255,255,255,0.1);
     color: white;
-    border: none;
-    padding: 10px 18px;
-    margin: 6px;
-    border-radius: 25px;
+
+    margin: 8px;
     cursor: pointer;
     transition: 0.3s;
-    font-weight: 500;
+} 
+
+.days button:hover {
+    transform: scale(1.15);
+    background: linear-gradient(to right, #a78bfa, #7c3aed);
 }
 
-/* Hover effect */
-.days button:hover {
+.days button.active {
     background: linear-gradient(to right, #a78bfa, #7c3aed);
     transform: scale(1.1);
 }
-
-/* Active button */
-.days button.active {
-    background: #a78bfa;
-    color: white;
-}
-
 /* Menu Box */
 .menu-box {
-    display: none;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 12px;
+    width: 95%;              /* increase width */
+    max-width: 1200px;      /* control max size */
+    margin: 40px auto;
+    padding: 30px 40px;     /* more inner space */
+    border-radius: 15px;
+
     background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.menu-box h3 {
+    font-size: 26px;
+}
+
+.menu-box p {
+    font-size: 18px;
+}
 /* Footer */
 footer {
     text-align: center;
@@ -70,12 +120,10 @@ footer {
 
 /* Right quote */
 .menu-quote {
-    flex: 1;
+    text-align: center;
+    margin-top: 15px;
     font-style: italic;
-    font-size: 14px;
-    opacity: 0.8;
-    border-left: 2px solid #a78bfa;
-    padding-left: 15px;
+    color: #d1c4ff;
 }
 .timings {
     display: flex;
@@ -97,3 +145,26 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(167, 139, 250, 0.4);
 }
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.4);
+}
+

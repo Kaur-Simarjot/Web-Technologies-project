@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warden Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>👤 Hostel Warden</h1>
+        <p class="subtitle">Administration & Support</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container my-5">
+
+    <h2 class="text-center mb-4">Hostel Wardens</h2>
+
+    <!-- BUTTONS -->
+    <div class="hostel-buttons text-center">
+        <button onclick="showWarden('h1')">Hostel 1</button>
+        <button onclick="showWarden('h2')">Hostel 2</button>
+        <button onclick="showWarden('h3')">Hostel 3</button>
+        <button onclick="showWarden('h4')">Hostel 4</button>
+    </div>
+
+    <!-- WARDEN INFO BOX -->
+
+    <div id="h1" class="warden-box">
+        <img src="https://via.placeholder.com/150">
+        <h3>Dr. Rajesh Kumar</h3>
+        <p>Boys Hostel - A</p>
+        <p>📞 +91 9876543210</p>
+        <p>📧 rajesh@gndec.ac.in</p>
+    </div>
+
+    <div id="h2" class="warden-box">
+        <img src="https://via.placeholder.com/150">
+        <h3>Ms. Neha Sharma</h3>
+        <p>Girls Hostel - B</p>
+        <p>📞 +91 9123456780</p>
+        <p>📧 neha@gndec.ac.in</p>
+    </div>
+
+    <div id="h3" class="warden-box">
+        <img src="https://via.placeholder.com/150">
+        <h3>Mr. Aman Singh</h3>
+        <p>Boys Hostel - C</p>
+        <p>📞 +91 9988776655</p>
+        <p>📧 aman@gndec.ac.in</p>
+    </div>
+
+    <div id="h4" class="warden-box">
+        <img src="https://via.placeholder.com/150">
+        <h3>Mrs. Pooja Verma</h3>
+        <p>Girls Hostel - D</p>
+        <p>📞 +91 9012345678</p>
+        <p>📧 pooja@gndec.ac.in</p>
+    </div>
+
+</div>
+
+    <!-- MESSAGE -->
+    <div class="warden-message">
+        <h4>Message from Warden</h4>
+        <p>
+            "Our goal is to provide a safe, disciplined, and comfortable environment 
+            for all students. Please feel free to reach out for any assistance."
+        </p>
+    </div>
+
+</div>
+<script>
+function showWarden(id) {
+
+    // Hide all
+    let boxes = document.querySelectorAll('.warden-box');
+    boxes.forEach(box => box.style.display = "none");
+
+    // Remove active from buttons
+    let buttons = document.querySelectorAll('.hostel-buttons button');
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Show selected
+    document.getElementById(id).style.display = "block";
+
+    // Highlight clicked button
+    event.target.classList.add("active");
+}
+
+// Default open
+window.onload = function() {
+    document.querySelector('.hostel-buttons button').click();
+}
+</script>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Hostel Management System
+</footer>
+
+</body>
+</html>

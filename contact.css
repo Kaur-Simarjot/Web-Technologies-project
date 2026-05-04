@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    color: white;
+
+    background: 
+        linear-gradient(rgba(47, 42, 90, 0.8), rgba(75, 59, 117, 0.9)),
+        url("GNE HOSTELS.jpg");  /* your image */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hero-section {
+     
+    backdrop-filter: blur(5px);
+    
+    ),
+    linear-gradient(to right, #4b3b75, #2f2a5a);
+
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* ===== WARDEN CARD ===== */
+/* BUTTONS */
+.hostel-buttons button {
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.hostel-buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #a78bfa, #7c3aed);
+}
+
+.hostel-buttons button.active {
+    background: #a78bfa;
+}
+
+/* WARDEN BOX */
+.warden-box {
+    display: none;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* IMAGE */
+.warden-box img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #a78bfa;
+    margin-bottom: 15px;
+}
+
+/* ===== INFO ===== */
+.warden-info h3 {
+    font-size: 26px;
+}
+
+.role {
+    color: #d1c4ff;
+    margin-bottom: 15px;
+}
+
+/* ===== CONTACT INFO ===== */
+.info p {
+    margin: 5px 0;
+}
+
+/* ===== TIMINGS ===== */
+.timings {
+    margin-top: 15px;
+}
+
+.timings h5 {
+    color: #a78bfa;
+}
+
+/* ===== MESSAGE BOX ===== */
+.warden-message {
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    text-align: center;
+    font-style: italic;
+    color: #d1c4ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .warden-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
