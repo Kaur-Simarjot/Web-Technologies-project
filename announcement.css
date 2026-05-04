@@ -1,49 +1,50 @@
-/* Page background */
+/* ===== PAGE BACKGROUND ===== */
 body {
-    background: linear-gradient(to right, #5f5183, #2f2a5a);
-    color: #a78bfa;
+    background: linear-gradient(to right, #453669, #453669);
+    color: white;
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Header Section */
+/* ===== HEADER ===== */
 .header-section {
-    background: linear-gradient(to right, #9e94bd96, #9e94bd96);
+   background: radial-gradient(circle at 20% 20%, #5c5185, #241f4b);
     color: white;
     text-align: center;
     padding: 40px 0;
 }
 
-/* Announcement Cards */
+/* ===== ANNOUNCEMENT CARDS ===== */
 .announcement-card {
-    background: #807e9f;
-    color: #fff9f9;
-    border-left: 5px solid #4f8cff;
-    border-left: 5px solid #0d6efd;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-left: 5px solid #a78bfa; /* purple accent */
+    border-radius: 12px;
     transition: 0.3s;
+    backdrop-filter: blur(10px);
 }
 
 /* Hover Effect */
 .announcement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.4);
 }
 
-/* Date Styling */
+/* ===== DATE ===== */
 .date {
     font-size: 14px;
-    color: rgb(255, 234, 234);
+    color: #d1c4ff;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
-    background-color: #0d6efd;
+    background: #1e1b3a;
     color: white;
     text-align: center;
     padding: 10px;
     margin-top: 40px;
 }
-/* Base badge style */
+
+/* ===== BADGES ===== */
 .badge {
     padding: 6px 12px;
     font-size: 12px;
@@ -52,14 +53,14 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* New (Red badge) */
+/* New Badge (Soft Purple-Red mix) */
 .bg-danger {
-    background: linear-gradient(to right, #c28b81, #c28b81);
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
     color: white;
 }
 
-/* Important (Yellow badge) */
+/* Important Badge (Purple Theme) */
 .bg-warning {
-    background: linear-gradient(to right, #a79784, #7da7e232);
-    color: #a7c2de;
+    background: linear-gradient(to right, #a78bfa, #7c3aed);
+    color: white;
 }
