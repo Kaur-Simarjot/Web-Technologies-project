@@ -1,0 +1,298 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background: radial-gradient(circle at top left, #5c5185, #241f4b);
+    color:white;
+    overflow-x:hidden;
+     background: 
+        linear-gradient(rgba(36,31,75,0.85), rgba(92,81,133,0.88)),
+        url("GNE HOSTELS - Edited.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+}
+
+.logo img{
+    height:80px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#b78cff;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:rgba(183,140,255,0.15);
+
+    filter:blur(120px);
+
+    border-radius:50%;
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:90px;
+    letter-spacing:2px;
+}
+
+.hero span{
+    color:#b78cff;
+}
+
+.hero p{
+    width:70%;
+    margin:25px auto;
+
+    font-size:22px;
+    line-height:1.8;
+
+    color:#ddd;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+
+    color:white;
+}
+
+/* INFO SECTION */
+
+.info-section{
+    width:85%;
+    margin:auto;
+    padding:50px 0;
+}
+
+.info-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.info-card{
+    background:rgba(255,255,255,0.06);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.4s;
+}
+
+.info-card:hover{
+    transform:translateY(-12px);
+
+    box-shadow:0 0 25px rgba(183,140,255,0.35);
+}
+
+.info-card h3{
+    margin-bottom:18px;
+
+    color:#c9a7ff;
+
+    font-size:28px;
+}
+
+.info-card p{
+    line-height:1.8;
+
+    color:#ddd;
+
+    font-size:18px;
+}
+
+/* GALLERY */
+
+.gallery{
+    width:85%;
+    margin:80px auto;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+}
+
+.gallery-card{
+    overflow:hidden;
+
+    border-radius:25px;
+
+    transition:0.4s;
+}
+
+.gallery-card img{
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.08);
+}
+
+/* WARDEN SECTION */
+
+.warden-section{
+    width:85%;
+    margin:100px auto;
+}
+
+.warden-card{
+    width:60%;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.4s;
+}
+
+.warden-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(183,140,255,0.3);
+}
+
+.warden-card h3{
+    font-size:40px;
+
+    color:#c9a7ff;
+
+    margin-bottom:25px;
+}
+
+.warden-card p{
+    font-size:20px;
+
+    margin:15px 0;
+
+    color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1d183d;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:18px;
+
+    margin-top:80px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero p{
+        width:90%;
+        font-size:18px;
+    }
+
+    .warden-card{
+        width:90%;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
